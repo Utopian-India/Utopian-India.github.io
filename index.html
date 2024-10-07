@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>National Education Reform Survey</title>
+  <link rel="stylesheet" href="css/style.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="our-aim.html">Our Aim</a>
+    <a href="#questions">Questions</a>
+  </nav>
+
+  <!-- Hero Section with Animation -->
+  <div class="hero" id="home">
+    <div class="animation-container">
+      <h2>Every Voice Matters</h2>
+    </div>
+    <button class="cta-button" onclick="window.location.href='https://forms.gle/FJvXp2N5EpNrhCoK8'">Take the Survey</button>
+  </div>
+
+  <!-- Main Content Section -->
+  <div class="content scroll-animate" id="about">
+    <h1>National Education Reform Survey</h1>
+    <p>We are conducting a national survey to gather insights from students, educators, and citizens across India to bring meaningful reforms to the Indian education system. <strong>No data has been collected yet as the survey is still in process.</strong> We aim to get at least 1 lakh responses to ensure the survey’s impact is significant.</p>
+    <p>Your participation matters! The more people join us, the stronger our voice will be in shaping the education system.</p>
+  </div>
+
+  <!-- Thought-Provoking Questions Section -->
+  <div class="questions-section scroll-animate" id="questions">
+    <h2>Thought-Provoking Questions</h2>
+    <p><strong>When will India be as developed as foreign countries?</strong></p>
+    <p><strong>When will our education system encourage creativity over memorization?</strong></p>
+    <p><strong>When will India become fully secular, without riots in the name of religion?</strong></p>
+    <p><strong>When will Indian students feel empowered to shape their own future?</strong></p>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    &copy; 2024 National Education Reform Survey
+  </footer>
+
+  <script>
+    // Preloader removal
+    window.addEventListener('load', function() {
+      document.getElementById('preloader').style.display = 'none';
+    });
+
+    // Scroll-triggered animations
+    window.addEventListener('scroll', function() {
+      var elements = document.querySelectorAll('.scroll-animate, .questions-section');
+      elements.forEach(function(el) {
+        var position = el.getBoundingClientRect().top;
+        if (position < window.innerHeight) {
+          el.classList.add('visible');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
